@@ -1,6 +1,6 @@
 ---
 permalink: /people/
-title: The Chong Lab Research Grouppp
+title: The Chong Lab Research Groupp
 #layout: splash
 #layout: single
 #classes: wide
