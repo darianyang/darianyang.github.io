@@ -1,9 +1,13 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Software"
+    url: /software/
+  - title: "People"
+    url: /people/
+  - title: "Join Us"
+    url: /join_us/
+  - title: "CSW"
+    url: /csw/
