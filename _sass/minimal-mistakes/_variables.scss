@@ -140,12 +140,12 @@ $base0f: #ff5370 !default;
    Breakpoints
    ========================================================================== */
 
-$small: 100px !default;
-$medium: 600px !default; /* 768px default */
-$medium-wide: 600px !default; /* 900px default */
-$large: 900px !default; /* 1024px default */
-$x-large: 1440px !default; /* 1280px default */
-$max-width: $large !default;
+$small: 100px !default; /* 600 default */
+$medium: 300px !default; /* 768px default */
+$medium-wide: 500px !default; /* 900px default */
+$large: 700px !default; /* 1024px default */
+$x-large: 900px !default; /* 1280px default */
+$max-width: $x-large !default;
 
 /*
    Grid
