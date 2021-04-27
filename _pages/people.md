@@ -1,6 +1,6 @@
 ---
 permalink: /people/
-title: The Chong Lab Research Groupp
+title: The Chong Lab Research Grouppp
 #layout: splash
 #layout: single
 #classes: wide
@@ -9,7 +9,7 @@ title: The Chong Lab Research Groupp
 toc: true
 toc_sticky: true
 toc_icon: "users"
-toc_label: "The Chong Labb"
+toc_label: "The Chong Lab"
 lillian:
   - image_path: /assets/images/people/LTC.jpg
     alt: "Lillian Chong"
