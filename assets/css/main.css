@@ -1873,7 +1873,8 @@ input, select, textarea {
 		border: 2px solid;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.7rem;
+		font-size: 0.9rem;
+		/*font-size: 0.7rem; # original size */
 		font-weight: 900;
 		height: 3rem;
 		letter-spacing: 0.1rem;
@@ -2554,7 +2555,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		margin-left: -1rem;
-		padding-left: 0;
+		padding-left: 64px;
 	}
 
 		ul.actions li {
