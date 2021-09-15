@@ -2555,7 +2555,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		margin-left: -1rem;
-		padding-left: 64px;
+		padding-left: 55px;
 	}
 
 		ul.actions li {
@@ -4315,7 +4315,7 @@ input, select, textarea {
 			display: flex;
 			position: relative;
 			text-align: justify;
-			width: 90%;
+			width: 80%;
 		}
 
 			#banner .content p {
