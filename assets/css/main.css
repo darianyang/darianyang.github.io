@@ -4314,7 +4314,7 @@ input, select, textarea {
 			display: flex;
 			position: relative;
 			text-align: justify;
-			width: 100%;
+			width: 90%;
 		}
 
 			#banner .content p {
