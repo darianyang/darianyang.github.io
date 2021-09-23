@@ -2555,7 +2555,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		margin-left: -1rem;
-		padding-left: 55px;
+		padding-left: 0px;
 	}
 
 		ul.actions li {
