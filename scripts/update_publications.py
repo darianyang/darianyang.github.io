@@ -44,7 +44,7 @@ SCHOLAR_USER_ID = "VTq9cxYAAAAJ"
 
 # The author's abbreviated name as it appears in citations.
 # Used to apply the bold-weight span.
-AUTHOR_HIGHLIGHT = "DT Yang"
+AUTHOR_HIGHLIGHT = ["Darian T. Yang", "Darian T Yang", "Darian Yang"]
 
 # Markers that delimit the auto-generated block inside publications.html
 MARKER_START = "<!-- PUBLICATIONS_START -->"
@@ -58,20 +58,22 @@ REQUEST_DELAY = 2
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _bold_author(author_str: str, highlight: str) -> str:
+def _bold_author(author_str: str, highlight: list[str]) -> str:
     """Wrap *highlight* in the same bold-span used on the page.
 
     Both *author_str* and the search key are treated as already-HTML-escaped
     strings so the replacement never corrupts entity references.
     """
-    escaped = html.escape(highlight)
-    return author_str.replace(
-        escaped,
-        f'<span style="font-weight: 800;">{escaped}</span>',
-    )
+    for h in highlight:
+        escaped = html.escape(h)
+        author_str = author_str.replace(
+            escaped,
+            f'<span style="font-weight: 800;">{escaped}</span>',
+        )
+    return author_str
 
 
-def _format_authors(authors: list[str], highlight: str) -> str:
+def _format_authors(authors: list[str], highlight: list[str]) -> str:
     """
     Turn a list of author strings into the comma-separated inline HTML
     used on the page (e.g. "AJ Guseman, LJ Rennick, …, and AM Gronenborn.").
@@ -79,7 +81,7 @@ def _format_authors(authors: list[str], highlight: str) -> str:
     parts = []
     for i, author in enumerate(authors):
         a = html.escape(author.strip())
-        if highlight in author:
+        if any(h in author for h in highlight):
             a = _bold_author(a, highlight)
         last = i == len(authors) - 1
         if last and len(authors) > 1:
@@ -91,7 +93,7 @@ def _format_authors(authors: list[str], highlight: str) -> str:
     return " ".join(parts)
 
 
-def _build_li(pub: dict, highlight: str) -> str:
+def _build_li(pub: dict, highlight: list[str]) -> str:
     """
     Build one ``<li>`` element for a publication dict as returned by
     ``scholarly.fill()``.  Falls back gracefully when optional fields are
@@ -152,7 +154,7 @@ def fetch_publications(user_id: str) -> list[dict]:
     return pubs
 
 
-def build_publications_block(pubs: list[dict], highlight: str) -> str:
+def build_publications_block(pubs: list[dict], highlight: list[str]) -> str:
     """Return the full HTML block (between markers, inclusive)."""
     items = "\n\n".join(_build_li(p, highlight) for p in pubs)
     return (
