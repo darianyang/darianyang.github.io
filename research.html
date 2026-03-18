@@ -45,28 +45,28 @@
 
 								<button class="research-card" data-target="force-fields">
 									<div class="research-card-img">
-										<img src="images/research/ff.png" alt="Force Fields" />
+										<img src="images/research/ff.png" alt="Force Fields" style="width: 100%; height: auto;" />
 									</div>
 									<div class="research-card-label">Force Fields</div>
 								</button>
 
 								<button class="research-card" data-target="enhanced-sampling">
 									<div class="research-card-img">
-										<img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" />
+										<img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" style="width: 100%; height: auto;" />
 									</div>
 									<div class="research-card-label">Enhanced Sampling</div>
 								</button>
 
 								<button class="research-card" data-target="nmr">
 									<div class="research-card-img">
-										<img src="images/research/diHis-Co.png" alt="NMR" />
+										<img src="images/research/diHis-Co.png" alt="NMR" style="width: 100%; height: auto;" />
 									</div>
 									<div class="research-card-label">NMR</div>
 								</button>
 
 								<button class="research-card" data-target="analysis-tools">
 									<div class="research-card-img">
-										<img src="images/research/wedap_logo.png" alt="Analysis Tools" />
+										<img src="images/research/gui.png" alt="Analysis Tools" style="width: 80%; height: auto;" />
 									</div>
 									<div class="research-card-label">Analysis Tools</div>
 								</button>
@@ -101,9 +101,24 @@
 								<div class="detail-inner">
 									<h3>Rare Event Sampling of Viral Capsids</h3>
 									<h4>Enhanced Sampling</h4>
+									<div class="detail-image"> <video width="100%" controls><source src="resources/d1d2_indirect.mp4"> </video> </div>
+									<p>We were finally able to resolve the atomic-resolution details of an alternate, “invisible” dimeric state of the HIV-1 capsid protein (after knowing about its existence for over a decade). We used a combination of <sup>19</sup>F NMR, weighted ensemble molecular dynamics simulations, Markov state modelling, and machine learning for interaction analysis. We experimentally validated the resulting structures, transition rates, and pathways of interconversion between multiple protein conformations. We hope that this integrated methodology is applicable to other systems with alternate states that cannot be characterized by experiment or simulation alone.</p>
+									<ul class="detail-links">
+										<li>Publication: <a href="https://doi.org/10.1073/pnas.2420371122"><em>The Proceedings of the National Academy of Sciences</em> (2025)</a></li>
+										<li>News article: <a href="https://www.psc.edu/hiv-1-capsid-protein/"><em>PSC: Science Highlights</em></a></li>
+										<li>News article: <a href="https://tacc.utexas.edu/news/latest-news/2025/03/05/hiv-protein-switch-may-help-virus-squeeze-into-host-cell-nucleus/"><em>TACC: Feature Story</em></a></li>
+										<li>News article: <a href="https://www.cmu.edu/mcs/news-events/2025/0313-hiv-capsule-psc"><em>CMU: Mellon College of Science Highlight</em></a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/d1d2" target="_blank">Accompanying data and code</a></li>
+									</ul>
+									<br>
+									<h3>Reinforcement Learning-based Weighted Ensemble Simulations</h3>
+									<h4>Enhanced Sampling</h4>
 									<div class="detail-image"><img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" /></div>
-									<p>Conformational sampling of the HIV-1 capsid protein dimer using the weighted ensemble path sampling strategy.</p>
-
+									<p>We developed a weighted ensemble path sampling strategy using concepts from reinforcement learning to automatically identify effective progress coordinates among a set of potential candidates on-the-fly during a simulation. Because of the statistically consistent nature of WE trajectory reweighting, the simulations maintain rigorous kinetics witout the need for, e.g. post-hoc Markov state modelling to correct for sampling biases.</p>
+									<ul class="detail-links">
+										<li>Preprint: <a href="https://doi.org/10.1101/2024.10.09.617475"><em>bioRxiv</em> (2024)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/werl" target="_blank">Code (to be released)</a></li>
+									</ul>									
 									<div class="back-to-cards-wrap">
 										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
 									</div>
@@ -117,8 +132,8 @@
 									<div class="detail-image"><img src="images/research/diHis-Co.png" alt="NMR" /></div>
 									<p>By combining a diHis motif, Co<sup>2+</sup>, and a chelating ligand, we can get orthogonal pseudocontact shift (PCS) datasets. This allows us to look at exact atomic positions within a distance range using the same protein.</p>
 									<ul class="detail-links">
-										<li>[1] <a href="https://doi.org/10.1021/jacs.2c12021"><em>The Journal of the American Chemical Society</em> (2023)</a></li>
-										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/gb1-pcs" target="_blank">Scripts for MD simulations and QM calculations to support PCS results</a></li>
+										<li>Paper: <a href="https://doi.org/10.1021/jacs.2c12021"><em>The Journal of the American Chemical Society</em> (2023)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/gb1-pcs" target="_blank">MD simulations and QM calculations to support PCS results</a></li>
 									</ul>
 
 									<div class="back-to-cards-wrap">
@@ -131,14 +146,15 @@
 								<div class="detail-inner">
 									<h3>Data Analysis and Visualization</h3>
 									<h4>Analysis Tools</h4>
-									<div class="detail-image"><img src="images/research/wedap_logo.png" alt="Analysis Tools" /></div>
-									<p>Python package for faster and more accessible analysis of h5 datasets output from WESTPA simulations.</p>
+									<div class="detail-image"><img src="images/research/wedap.gif" alt="Analysis Tools" /></div>
+									<p>We developed WEDAP: A Python package for Weighted Ensemble Data Analysis and Plotting. This package was made for dealing with complex datasets from weighted ensemble simulations, but also works for standard simulations. We provide a CLI, Python API, and GUI interface to analyze and plot large-scale simulation data.</p>
 									<ul class="detail-links">
-										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/wedap" target="_blank">GitHub repository</a></li>
+										<li>Paper: <a href="https://doi.org/10.1021/acs.jcim.4c00867"><em>The Journal of Chemical Information and Modeling</em> (2024)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/wedap" target="_blank">WEDAP Code</a></li>
 									</ul>
 
 									<div class="back-to-cards-wrap">
-										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Topics</button>
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
 									</div>
 								</div>
 							</div>
