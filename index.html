@@ -16,43 +16,24 @@
 		<!-- Page wrapper -->
 			<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><a href="index.html">Darian<span> Yang</span></a></span>
-						<a href="#menu"><span>Menu</span></a>
-					</header>
 
-				<!-- Nav -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
+				<!-- Header -->
+					<header id="header">
+						<span class="logo"><a href="index.html">Darian<span> Yang</span></a></span>
+						<nav id="nav-links">
+							<ul>
+								<li><a href="index.html">About</a></li>
 								<li><a href="research.html">Research</a></li>
 								<li><a href="publications.html">Publications</a></li>
+								<li><a href="resources/CV.pdf" target="_blank">CV</a></li>
 							</ul>
-							<a class="close"><span>Close</span></a>
-						</div>
-					</nav>
+						</nav>
+						<button id="theme-toggle" aria-label="Toggle dark/light mode">
+							<i class="theme-icon fa fa-moon-o"></i>
+						</button>
+					</header>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<!--<h1 style="float:center">DARIAN YANG</h1>
-							<span class="image center" style="width: 50%"><img src="images/research/capsid_overlay.png" alt="" width="900" height="600"/></span>-->
-							<div class="content">
-								<p><b>Darian Yang  |  PhD Candidate  |  Biophysics </b> <br />
-								Atomistic simulations  ·  Enhanced sampling  ·  NMR</p>
-								<ul class="actions special">
-									<li><a href="#footer" class="button next">About</a></li> <br>
-									<!--<li><a href="research.html" class="button">Research</a></li> <br>-->
-									<!--<li><a href="publications.html" class="button">Publications</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</section>
-
-				<!-- Footer -->
+				<!-- About -->
 					<section id="footer" class="wrapper">
 						<div class="inner">
 							<div class="split">
@@ -60,16 +41,26 @@
 									<header>
 										<h2>About</h2>
 									</header>
-									<p><span class="image left" style="width: 30%"><img src="images/DTY.JPG" alt="" /></span>
-										I'm a PhD candidate in the joint University of Pittsburgh and Carnegie Mellon University biophysics program with <a href='https://ltchong.github.io/'>Prof. Lillian Chong</a> and <a href='http://amg.structbio.pitt.edu/about/'>Prof. Angela Gronenborn</a>. My research is focused on studying protein dynamics under the lens of computational biophysics, but you can occasionally find me in the wet lab.
+									<header>
+										<h6>Atomistic simulations · Machine learning · Enhanced sampling</h6>
+									</header>
+									<p><span class="image left" style="width: 20%"><img src="images/DTY.JPEG" alt="" /></span>
+										Currently, I'm a postdoctoral research fellow at the University of Copenhagen with <a href='https://www1.bio.ku.dk/english/research/bms/sbinlab/kll/'>Kresten Lindorff-Larsen</a>, broadly interested in computational protein biophysics. I'm working at the interface of generative AI models (e.g. <a href='https://www.nature.com/articles/s41586-024-07487-w'>AlphaFold3</a>) and molecular dynamics simulations, with the goal of studying the dynamics of protein–ligand interactions.
 									</p>
 									<p>
-									My thesis project began with a focus on the integration of biophysical experiments such as NMR spectroscopy with molecular dynamics simulations. Specifically, I'm intergrating <sup>19</sup>F NMR with weighted ensemble simulations for rare events sampling. To do this, I first derived a set of force field parameters for fluorinated amino acids, enabling me to directly compare <sup>19</sup>F NMR experiments and my simulation environments. After much effort, I was able to directly observe an experimentally validated conformational transition of the dimeric HIV-1 capsid protein. While I got the result I wanted, it took way more resources (both personally and computationally) than I expected. This directly inspired (and provided some training data for) the current phase of my thesis, which is focused on developing new methods that combine machine learning with weighted ensemble. My ultimate goal is to enable more efficient and automated path sampling simulations by learning which metrics to use and which trajectories to focus simulation time on.
+										I got my PhD in Biophysics from a <a href="https://www.mbsb.pitt.edu/about">joint program</a> at the University of Pittsburgh and Carnegie Mellon University with <a href='https://ltchong.github.io/'>Lillian Chong</a> and <a href='http://amg.structbio.pitt.edu/about/'>Angela Gronenborn</a>. My thesis focused on studying protein conformational dynamics using enhanced sampling methods, such as weighted ensemble molecular dynamics simulations, and experimental techniques, such as NMR spectroscopy.
+									</p>
+									<p>
+										Along the way, I developed force field parameters for all-atom simulations of fluorinated amino acids, a machine learning method for automated selection of progess coordinates during weighted ensemble simulations, and a software package for data visualization of large-scale simulations.
+									</p>
+									<p>
+										See my <a href="research.html">research</a> page for an overview of some of this work.
 									</p>
 									<h5>Education</h5>
-									<p> 										2019-present &ensp;PhD Candidate, Biophysics, University of Pittsburgh & Carnegie Mellon University
+									<p>
+									2019-2024 &emsp;&ensp;PhD, Biophysics, University of Pittsburgh & Carnegie Mellon University
 									<br>
-									2014-2018 &emsp;&ensp;B.Sc. Biochemistry, University of Delaware 
+									2014-2018 &emsp;&ensp;B.Sc. Chemistry, University of Delaware 
 									</p>
 									<ul class="actions">
 										<li><a href="research.html" class="button next">Research</a></li>
@@ -81,6 +72,7 @@
 									<li><a href="https://www.linkedin.com/in/darianyang/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/darianyang" target="_blank" class="icon brands alt fa-github-alt"><span class="label">GitHub</span></a></li>
 									<li><a href="https://twitter.com/darianyang" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://bsky.app/profile/darianyang.bsky.social" target="_blank" class="icon brands alt fa-twitter"><span class="label">BlueSky</span></a></li>
 									<li><a href="mailto:dty7@pitt.edu" class="icon solid alt fa-envelope"><span class="label">Contact</span></a></li>
 								</ul>
 							</div>
@@ -90,7 +82,7 @@
 				<!-- Copyright -->
 					<section class="wrapper style2 copyright">
 						<div class="inner">
-							&copy; Darian Yang 2023
+							&copy; Darian Yang 2026
 						</div>
 					</section>
 
@@ -104,6 +96,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script src="assets/js/theme.js"></script>
 
 	</body>
 </html>

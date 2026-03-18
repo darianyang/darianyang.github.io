@@ -16,96 +16,157 @@
 		<!-- Page wrapper -->
 			<div id="page-wrapper">
 
+
 				<!-- Header -->
 					<header id="header">
 						<span class="logo"><a href="index.html">Darian <span>Yang</span></a></span>
-						<a href="#menu"><span>Menu</span></a>
-					</header>
-
-					<!-- Nav -->
-						<nav id="menu">
-							<div class="inner">
-								<h2>Menu</h2>
-								<ul class="links">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="research.html">Research</a></li>
-									<li><a href="publications.html">Publications</a></li>
-								</ul>
-								<a class="close"><span>Close</span></a>
-							</div>
+						<nav id="nav-links">
+							<ul>
+								<li><a href="index.html">About</a></li>
+								<li><a href="research.html">Research</a></li>
+								<li><a href="publications.html">Publications</a></li>
+								<li><a href="resources/CV.pdf" target="_blank">CV</a></li>
+							</ul>
 						</nav>
+						<button id="theme-toggle" aria-label="Toggle dark/light mode">
+							<i class="theme-icon fa fa-moon-o"></i>
+						</button>
+					</header>
 
 				<!-- Main -->
 					<section id="main" class="wrapper style2">
 						<div class="inner">
 							<header class="major special">
-								<h1>Research</h1>
+								<h2>Research</h2>
 							</header>
-							<ul class="tabs">
 
-								<li>
-									<h3>FORCE FIELDS</h3>
-									<p><b>Force Field Development</b></p>
-									<p><span class="image right" style="width:30%"><img src="images/research/ff.png" alt="" /></span>
-										Parameters for the AMBER ff15ipq protein force field. I was a part of the validation efforts for the ff15ipq-m force field [1] and have also fully developed and parameterized ff15ipq compatible parameters for the fluorinated, aromatic amino acids that are commonly used in <sup>19</sup>F NMR [2]. To help with validation of the fluorinated amino acid parameters, I developed a way to calculate pragmatically <sup>19</sup>F NMR relaxation rates. I've also worked on a more automated workflow for parameterizing new ligand molecules in the context of the ff15ipq force field.
-									</p>
-									<p>
-										[1] <a href="https://doi.org/10.1063/5.0019054"><em>The Journal of Chemical Physics</em> <b2> (2020)</b2></a><br>
-										[2] <a href="https://doi.org/10.1021/acs.jpca.2c00255"><em>The Journal of Physical Chemistry A</em> <b2> (2022)</b2></a><br>
-										<i class="fa fa-github-alt fa-lg"></i>  <a href="https://github.com/darianyang/ff15ipq-19F" target="_blank"><span class="label">Code for <sup>19</sup>F ff15ipq parameters</span></a><br>
-										<i class="fa fa-github-alt fa-lg"></i>  <a href="https://github.com/darianyang/ff15ipq-lig" target="_blank"><span class="label">Code for general ff15ipq ligand parameterization</span></a><br>
-										<i class="fa fa-github-alt fa-lg"></i>  <a href="https://github.com/darianyang/fluorelax" target="_blank"><span class="label">Code for calculating <sup>19</sup>F NMR relaxation rates from MD simulation data</span></a>
-									</p>
-									<hr />
-								</li>
+							<!-- Research topic cards -->
+							<div class="research-grid">
 
-								<li>
-									<h3>ENHANCED SAMPLING</h3>
-									<p><b>Rare Event Sampling of Viral Capsids</b></p>
-									<p><span class="image left" style="width:40%"><img src="images/research/capsid_overlay.png" alt="" /></span>
-										Conformational sampling of the HIV-1 capsid protein dimer using the weighted ensemble path sampling strategy.
-									</p>
-									<!--<p>
-										# pubs here
-									</p>-->
+								<button class="research-card" data-target="force-fields">
+									<div class="research-card-img">
+										<img src="images/research/ff.png" alt="Force Fields" style="width: 100%; height: auto;" />
+									</div>
+									<div class="research-card-label">Force Fields</div>
+								</button>
 
-									<hr />
-								</li>
+								<button class="research-card" data-target="enhanced-sampling">
+									<div class="research-card-img">
+										<img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" style="width: 100%; height: auto;" />
+									</div>
+									<div class="research-card-label">Enhanced Sampling</div>
+								</button>
 
-								<li>
-									<h3>NMR</h3>
-									<p><b><sup>19</sup>F NMR</b></p>
-									<p><span class="image left" style="width:20%"><img src="images/research/diHis-Co.png" alt="" /></span>								
-										By combining a diHis motif, Co<sup>2+</sup>, and a chelating ligand, we can get orthogonal pseudocontact shift (PCS) datasets. This allows us to look at exact atomic positions within a distance range using the same protein.
-									</p>
-									<p>
-										[1] <a href="https://doi.org/10.1021/jacs.2c12021"><em>The Journal of the American Chemical Society</em> <b2> (2023)</b2></a><br>
-										<i class="fa fa-github-alt fa-lg"></i>  <a href="https://github.com/darianyang/gb1-pcs" target="_blank"><span class="label">Scripts for MD simulations and QM calculations to support PCS results</span></a>
-									</p>
-									<hr />
-								</li>
+								<button class="research-card" data-target="nmr">
+									<div class="research-card-img">
+										<img src="images/research/diHis-Co.png" alt="NMR" style="width: 100%; height: auto;" />
+									</div>
+									<div class="research-card-label">NMR</div>
+								</button>
 
-								<li>
-									<h3>ANALYSIS TOOLS</h3>
-									<p><b>Data Analysis and Visualization</b></p>
-									<p><span class="image left" style="width:30%"><img src="images/research/wedap_logo.png" alt="" /></span>
-										Python package for faster and more accessible analysis of h5 datasets output from WESTPA simulations.
-									</p>
-									<p>
-										<i class="fa fa-github-alt fa-lg"></i>  <a href="https://github.com/darianyang/wedap" target="_blank"><span class="label">GitHub repository</span></a>
-									</p>
-									<hr />
-								</li>
+								<button class="research-card" data-target="analysis-tools">
+									<div class="research-card-img">
+										<img src="images/research/gui.png" alt="Analysis Tools" style="width: 80%; height: auto;" />
+									</div>
+									<div class="research-card-label">Analysis Tools</div>
+								</button>
 
-							</ul>
+							</div><!-- /.research-grid -->
+
+							<!-- Detail panel: populated by JS on card click -->
+							<div id="research-detail" class="research-detail-panel"></div>
+
+							<!-- Hidden detail content templates -->
+							<div id="data-force-fields" style="display:none">
+								<div class="detail-inner">
+									<h3>Force Field Development</h3>
+									<h4>Force Fields</h4>
+									<div class="detail-image"><img src="images/research/ff.png" alt="Force Fields" /></div>
+									<p>Parameters for the AMBER ff15ipq protein force field. I was a part of the validation efforts for the ff15ipq-m force field [1] and have also fully developed and parameterized ff15ipq compatible parameters for the fluorinated, aromatic amino acids that are commonly used in <sup>19</sup>F NMR [2]. To help with validation of the fluorinated amino acid parameters, I developed a way to calculate pragmatically <sup>19</sup>F NMR relaxation rates. I've also worked on a more automated workflow for parameterizing new ligand molecules in the context of the ff15ipq force field.</p>
+									<ul class="detail-links">
+										<li>[1] <a href="https://doi.org/10.1063/5.0019054"><em>The Journal of Chemical Physics</em> (2020)</a></li>
+										<li>[2] <a href="https://doi.org/10.1021/acs.jpca.2c00255"><em>The Journal of Physical Chemistry A</em> (2022)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/ff15ipq-19F" target="_blank">Code for <sup>19</sup>F ff15ipq parameters</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/ff15ipq-lig" target="_blank">Code for general ff15ipq ligand parameterization</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/fluorelax" target="_blank">Code for calculating <sup>19</sup>F NMR relaxation rates from MD simulation data</a></li>
+									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
+									</div>
+								</div>
+							</div>
+
+							<div id="data-enhanced-sampling" style="display:none">
+								<div class="detail-inner">
+									<h3>Rare Event Sampling of Viral Capsids</h3>
+									<h4>Enhanced Sampling</h4>
+									<div class="detail-image"> <video width="100%" controls><source src="resources/d1d2_indirect.mp4"> </video> </div>
+									<p>We were finally able to resolve the atomic-resolution details of an alternate, “invisible” dimeric state of the HIV-1 capsid protein (after knowing about its existence for over a decade). We used a combination of <sup>19</sup>F NMR, weighted ensemble molecular dynamics simulations, Markov state modelling, and machine learning for interaction analysis. We experimentally validated the resulting structures, transition rates, and pathways of interconversion between multiple protein conformations. We hope that this integrated methodology is applicable to other systems with alternate states that cannot be characterized by experiment or simulation alone.</p>
+									<ul class="detail-links">
+										<li>Publication: <a href="https://doi.org/10.1073/pnas.2420371122"><em>The Proceedings of the National Academy of Sciences</em> (2025)</a></li>
+										<li>News article: <a href="https://www.psc.edu/hiv-1-capsid-protein/"><em>PSC: Science Highlights</em></a></li>
+										<li>News article: <a href="https://tacc.utexas.edu/news/latest-news/2025/03/05/hiv-protein-switch-may-help-virus-squeeze-into-host-cell-nucleus/"><em>TACC: Feature Story</em></a></li>
+										<li>News article: <a href="https://www.cmu.edu/mcs/news-events/2025/0313-hiv-capsule-psc"><em>CMU: Mellon College of Science Highlight</em></a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/d1d2" target="_blank">Accompanying data and code</a></li>
+									</ul>
+									<br>
+									<h3>Reinforcement Learning-based Weighted Ensemble Simulations</h3>
+									<h4>Enhanced Sampling</h4>
+									<div class="detail-image"><img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" /></div>
+									<p>We developed a weighted ensemble path sampling strategy using concepts from reinforcement learning to automatically identify effective progress coordinates among a set of potential candidates on-the-fly during a simulation. Because of the statistically consistent nature of WE trajectory reweighting, the simulations maintain rigorous kinetics witout the need for, e.g. post-hoc Markov state modelling to correct for sampling biases.</p>
+									<ul class="detail-links">
+										<li>Preprint: <a href="https://doi.org/10.1101/2024.10.09.617475"><em>bioRxiv</em> (2024)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/werl" target="_blank">Code (to be released)</a></li>
+									</ul>									
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
+									</div>
+								</div>
+							</div>
+
+							<div id="data-nmr" style="display:none">
+								<div class="detail-inner">
+									<h3><sup>19</sup>F NMR</h3>
+									<h4>NMR</h4>
+									<div class="detail-image"><img src="images/research/diHis-Co.png" alt="NMR" /></div>
+									<p>By combining a diHis motif, Co<sup>2+</sup>, and a chelating ligand, we can get orthogonal pseudocontact shift (PCS) datasets. This allows us to look at exact atomic positions within a distance range using the same protein.</p>
+									<ul class="detail-links">
+										<li>Paper: <a href="https://doi.org/10.1021/jacs.2c12021"><em>The Journal of the American Chemical Society</em> (2023)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/gb1-pcs" target="_blank">MD simulations and QM calculations to support PCS results</a></li>
+									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
+									</div>
+								</div>
+							</div>
+
+							<div id="data-analysis-tools" style="display:none">
+								<div class="detail-inner">
+									<h3>Data Analysis and Visualization</h3>
+									<h4>Analysis Tools</h4>
+									<div class="detail-image"><img src="images/research/wedap.gif" alt="Analysis Tools" /></div>
+									<p>We developed WEDAP: A Python package for Weighted Ensemble Data Analysis and Plotting. This package was made for dealing with complex datasets from weighted ensemble simulations, but also works for standard simulations. We provide a CLI, Python API, and GUI interface to analyze and plot large-scale simulation data.</p>
+									<ul class="detail-links">
+										<li>Paper: <a href="https://doi.org/10.1021/acs.jcim.4c00867"><em>The Journal of Chemical Information and Modeling</em> (2024)</a></li>
+										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/wedap" target="_blank">WEDAP Code</a></li>
+									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Projects</button>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</section>
 
 
-				<!-- Copyright -->
+								<!-- Copyright -->
 					<section class="wrapper style2 copyright">
 						<div class="inner">
-							&copy; Darian Yang 2023
+							&copy; Darian Yang 2026
 						</div>
 					</section>
 
@@ -120,6 +181,65 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script src="assets/js/theme.js"></script>
+
+		<!-- Research card interaction -->
+		<script>
+		(function() {
+			var cards   = document.querySelectorAll('.research-card');
+			var detail  = document.getElementById('research-detail');
+			var grid    = document.querySelector('.research-grid');
+			var active  = null;
+
+			function getHeaderHeight() {
+				return document.getElementById('header').offsetHeight || 64;
+			}
+
+			cards.forEach(function(card) {
+				card.addEventListener('click', function() {
+					var target  = card.getAttribute('data-target');
+					var source  = document.getElementById('data-' + target);
+
+					// Toggle off if the same card is clicked again
+					if (active === target && detail.style.display !== 'none') {
+						detail.style.display = 'none';
+						card.classList.remove('active');
+						active = null;
+						return;
+					}
+
+					// Deactivate all cards
+					cards.forEach(function(c) { c.classList.remove('active'); });
+
+					// Mark this card active
+					card.classList.add('active');
+					active = target;
+
+					// Populate and show the detail panel
+					detail.innerHTML = source ? source.innerHTML : '';
+					detail.style.display = 'block';
+
+					// Smooth-scroll to the detail panel (offset for fixed header)
+					var top = detail.getBoundingClientRect().top + window.pageYOffset - getHeaderHeight() - 24;
+					window.scrollTo({ top: top, behavior: 'smooth' });
+				});
+			});
+
+			// Event delegation: "Back to Topics" button inside the detail panel
+			detail.addEventListener('click', function(e) {
+				if (!e.target.closest('.back-to-cards')) return;
+
+				// Close the detail panel and deactivate cards
+				detail.style.display = 'none';
+				cards.forEach(function(c) { c.classList.remove('active'); });
+				active = null;
+
+				// Smooth-scroll back to the card grid
+				var top = grid.getBoundingClientRect().top + window.pageYOffset - getHeaderHeight() - 24;
+				window.scrollTo({ top: top, behavior: 'smooth' });
+			});
+		})();
+		</script>
 
 	</body>
 </html>

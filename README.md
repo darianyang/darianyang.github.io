@@ -5,4 +5,4 @@
 - fix automated sitemap generation, then add for SEO
 
 ---
-Modello rubato da luigi: https://luigibonati.github.io/
+Originally based on HTML template: Standout by Pixelarity [pixelarity.com](https://pixelarity.com/)
