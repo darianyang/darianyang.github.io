@@ -4642,3 +4642,76 @@ input, select, textarea {
 		color: rgba(40, 40, 40, 0.5);
 		text-align: center;
 	}
+
+/* Inline Navigation Links */
+
+	#header > #nav-links {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		margin-right: 1.5rem;
+	}
+
+		#header > #nav-links ul {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+			#header > #nav-links ul li a {
+				-moz-transition: color 0.2s ease-in-out;
+				-webkit-transition: color 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out;
+				color: inherit;
+				display: block;
+				font-size: 0.75rem;
+				font-weight: 700;
+				letter-spacing: 0.2rem;
+				padding: 0 0.9rem;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+				#header > #nav-links ul li a:hover,
+				#header > #nav-links ul li a:focus {
+					color: rgba(0, 0, 0, 0.5);
+				}
+
+	#header.alt > #nav-links ul li a:hover,
+	#header.alt > #nav-links ul li a:focus {
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#header > #nav-links {
+			margin-right: 0.5rem;
+		}
+
+			#header > #nav-links ul li a {
+				font-size: 0.65rem;
+				padding: 0 0.5rem;
+				letter-spacing: 0.1rem;
+			}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#header > #nav-links ul li a {
+			font-size: 0.6rem;
+			padding: 0 0.35rem;
+			letter-spacing: 0.05rem;
+		}
+
+	}
