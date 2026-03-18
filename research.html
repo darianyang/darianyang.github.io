@@ -90,6 +90,10 @@
 										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/ff15ipq-lig" target="_blank">Code for general ff15ipq ligand parameterization</a></li>
 										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/fluorelax" target="_blank">Code for calculating <sup>19</sup>F NMR relaxation rates from MD simulation data</a></li>
 									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Topics</button>
+									</div>
 								</div>
 							</div>
 
@@ -99,6 +103,10 @@
 									<h4>Enhanced Sampling</h4>
 									<div class="detail-image"><img src="images/research/capsid_overlay.png" alt="Enhanced Sampling" /></div>
 									<p>Conformational sampling of the HIV-1 capsid protein dimer using the weighted ensemble path sampling strategy.</p>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Topics</button>
+									</div>
 								</div>
 							</div>
 
@@ -112,6 +120,10 @@
 										<li>[1] <a href="https://doi.org/10.1021/jacs.2c12021"><em>The Journal of the American Chemical Society</em> (2023)</a></li>
 										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/gb1-pcs" target="_blank">Scripts for MD simulations and QM calculations to support PCS results</a></li>
 									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Topics</button>
+									</div>
 								</div>
 							</div>
 
@@ -124,6 +136,10 @@
 									<ul class="detail-links">
 										<li><i class="fa fa-github-alt"></i> <a href="https://github.com/darianyang/wedap" target="_blank">GitHub repository</a></li>
 									</ul>
+
+									<div class="back-to-cards-wrap">
+										<button class="back-to-cards"><i class="fa fa-arrow-up" style="margin-right:0.4rem;"></i>Back to Topics</button>
+									</div>
 								</div>
 							</div>
 
@@ -156,7 +172,12 @@
 		(function() {
 			var cards   = document.querySelectorAll('.research-card');
 			var detail  = document.getElementById('research-detail');
+			var grid    = document.querySelector('.research-grid');
 			var active  = null;
+
+			function getHeaderHeight() {
+				return document.getElementById('header').offsetHeight || 64;
+			}
 
 			cards.forEach(function(card) {
 				card.addEventListener('click', function() {
@@ -183,10 +204,23 @@
 					detail.style.display = 'block';
 
 					// Smooth-scroll to the detail panel (offset for fixed header)
-					var headerH = document.getElementById('header').offsetHeight || 64;
-					var top     = detail.getBoundingClientRect().top + window.pageYOffset - headerH - 24;
+					var top = detail.getBoundingClientRect().top + window.pageYOffset - getHeaderHeight() - 24;
 					window.scrollTo({ top: top, behavior: 'smooth' });
 				});
+			});
+
+			// Event delegation: "Back to Topics" button inside the detail panel
+			detail.addEventListener('click', function(e) {
+				if (!e.target.closest('.back-to-cards')) return;
+
+				// Close the detail panel and deactivate cards
+				detail.style.display = 'none';
+				cards.forEach(function(c) { c.classList.remove('active'); });
+				active = null;
+
+				// Smooth-scroll back to the card grid
+				var top = grid.getBoundingClientRect().top + window.pageYOffset - getHeaderHeight() - 24;
+				window.scrollTo({ top: top, behavior: 'smooth' });
 			});
 		})();
 		</script>

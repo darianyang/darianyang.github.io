@@ -5133,3 +5133,10 @@ input, select, textarea {
 		html[data-theme="dark"] .research-detail-panel .detail-inner h4 {
 			color: rgba(208, 208, 208, 0.6);
 		}
+
+	/* Back-to-topics button inside the detail panel */
+
+	.back-to-cards-wrap {
+		clear: both;       /* clear the floated .detail-image */
+		margin-top: 2rem;
+	}
